@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="/libs/react.development.js"> </script>
+        <script src="/libs/react-dom.development.js"> </script>
+        <script src="/libs/babel-standalone.js"> </script>
+    </head>
+<body>
+    <div id="app"></div> <!--マウント先を作成-->
+    <script type="text/babel">
+        const appEl = document.querySelector('#app');
+        const root = ReactDOM.createRoot(appEl); //rootを作成
+        // function Example(){     //関数componentを定義
+        //     return <h1>component定義</h1>;
+        // }
+        const Example = () => {     //allow関数で関数componentを定義
+            return (
+                <div>
+                    <h1>component定義</h1>
+                </div>
+            );
+        }
+        const LogTest = () =>{
+            return (
+                "ログ戻り値"
+            );
+        }
+        console.log(LogTest());
+        root.render(<Example />);    //rootのrenderメソッドを呼ぶ
+    </script>
+</body>
+</html>
